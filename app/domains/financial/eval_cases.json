@@ -1,0 +1,212 @@
+[
+  {
+    "id": "fin_001",
+    "query": "苹果公司服务业务的毛利率大概是多少?",
+    "reference_answer": "服务业务毛利率约为 70% 以上。",
+    "expected_keywords": ["服务", "毛利率", "70"],
+    "metadata": {"category": "rag_recall", "source": "apple_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_002",
+    "query": "什么是自由现金流(FCF)?",
+    "reference_answer": "自由现金流是经营现金流减去资本性支出后的剩余现金。",
+    "expected_keywords": ["自由现金流", "经营现金流", "资本"],
+    "metadata": {"category": "concept", "source": "financial_metrics", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_003",
+    "query": "英伟达的数据中心营收增长情况如何?",
+    "reference_answer": "数据中心是英伟达增长引擎,同比增长超过 100%。",
+    "expected_keywords": ["数据中心", "营收", "增长"],
+    "metadata": {"category": "rag_recall", "source": "nvidia_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_004",
+    "query": "多头(Bull)和空头(Bear)分析分别看重什么?",
+    "reference_answer": "多头看重增长、TAM、护城河和催化剂;空头关注估值、增速放缓、利润率压力和集中度等风险。",
+    "expected_keywords": ["多头", "空头", "增长", "风险"],
+    "metadata": {"category": "concept", "source": "investment_analysis", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_005",
+    "query": "帮我深度分析苹果。",
+    "reference_answer": "综合多空双方视角的平衡分析,包含关键财务指标、竞争威胁、风险评估与投资建议。",
+    "expected_keywords": ["营收", "风险", "投资", "多头", "空头"],
+    "metadata": {"category": "deliberation", "source": "multi_view", "expected_mode": "deliberation"}
+  },
+  {
+    "id": "fin_006",
+    "query": "帮我分析一下 GalaxyCorp Universe 这家公司。",
+    "reference_answer": "知识库中暂无相关数据,系统不应编造财务数字,并建议用真实公司重试。",
+    "expected_keywords": ["数据不足", "无相关数据"],
+    "metadata": {"category": "boundary", "source": "none", "expected_mode": "react", "expects_no_hallucination": true}
+  },
+  {
+    "id": "fin_007",
+    "query": "苹果的收入结构里 iPhone 大约占多少比例?",
+    "reference_answer": "iPhone 大约贡献苹果 50% 左右收入。",
+    "expected_keywords": ["iPhone", "50", "收入"],
+    "metadata": {"category": "rag_recall", "source": "apple_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_008",
+    "query": "苹果自由现金流大概是什么规模?",
+    "reference_answer": "苹果自由现金流约为 1000 亿美元以上规模。",
+    "expected_keywords": ["自由现金流", "1000", "美元"],
+    "metadata": {"category": "rag_recall", "source": "apple_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_009",
+    "query": "苹果主要有哪些投资风险?",
+    "reference_answer": "主要风险包括中国市场、App Store 政策、AI 进展落后和 iPhone 周期波动。",
+    "expected_keywords": ["中国", "App Store", "AI", "iPhone"],
+    "metadata": {"category": "risk_analysis", "source": "apple_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_010",
+    "query": "微软当前的核心增长引擎是什么?",
+    "reference_answer": "Azure 云业务是微软的重要增长引擎。",
+    "expected_keywords": ["Azure", "增长", "云"],
+    "metadata": {"category": "rag_recall", "source": "microsoft_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_011",
+    "query": "微软的营业利润率大致处于什么区间?",
+    "reference_answer": "微软营业利润率大致在 40% 到 45% 区间。",
+    "expected_keywords": ["营业利润率", "40", "45"],
+    "metadata": {"category": "rag_recall", "source": "microsoft_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_012",
+    "query": "微软财务分析中需要重点关注哪些风险?",
+    "reference_answer": "需要关注 AI 资本开支、Azure 放缓、监管、汇率和 Activision 整合等风险。",
+    "expected_keywords": ["AI", "Azure", "监管", "汇率"],
+    "metadata": {"category": "risk_analysis", "source": "microsoft_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_013",
+    "query": "英伟达的毛利率和经营利润率大概是什么水平?",
+    "reference_answer": "英伟达毛利率约 70% 到 75% 以上,经营利润率约 50% 以上。",
+    "expected_keywords": ["毛利率", "70", "经营利润率", "50"],
+    "metadata": {"category": "rag_recall", "source": "nvidia_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_014",
+    "query": "英伟达投资分析中有哪些关键风险?",
+    "reference_answer": "关键风险包括客户集中、半导体周期、HBM/先进封装供给、出口管制和估值。",
+    "expected_keywords": ["客户集中", "半导体", "出口管制", "估值"],
+    "metadata": {"category": "risk_analysis", "source": "nvidia_financials", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_015",
+    "query": "比较苹果、微软、英伟达三家公司各自的增长驱动。",
+    "reference_answer": "苹果依赖 iPhone 与服务生态,微软依赖 Azure 与企业软件,英伟达依赖数据中心和 AI 计算需求。",
+    "expected_keywords": ["苹果", "微软", "英伟达", "Azure", "数据中心"],
+    "metadata": {"category": "comparison", "source": "cross_company", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_016",
+    "query": "分析公司财报时,为什么不能只看净利润?",
+    "reference_answer": "净利润可能受一次性项目和会计处理影响,还应结合现金流、利润率、分部和指引判断。",
+    "expected_keywords": ["净利润", "现金流", "一次性", "指引"],
+    "metadata": {"category": "concept", "source": "earnings_report_structure", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_017",
+    "query": "10-K、10-Q、业绩新闻稿和电话会纪要分别有什么用?",
+    "reference_answer": "10-K 是年报,10-Q 是季报,业绩新闻稿披露核心结果,电话会纪要提供管理层解释和问答。",
+    "expected_keywords": ["10-K", "10-Q", "业绩", "电话会"],
+    "metadata": {"category": "concept", "source": "earnings_report_structure", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_018",
+    "query": "财报中的三张核心财务报表是什么?",
+    "reference_answer": "三张核心报表是利润表、资产负债表和现金流量表。",
+    "expected_keywords": ["利润表", "资产负债表", "现金流"],
+    "metadata": {"category": "concept", "source": "earnings_report_structure", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_019",
+    "query": "同比 YoY 和环比 QoQ 分别适合看什么?",
+    "reference_answer": "YoY 用于观察相对去年同期的变化,QoQ 用于观察相邻季度变化。",
+    "expected_keywords": ["YoY", "QoQ", "去年同期", "季度"],
+    "metadata": {"category": "concept", "source": "financial_metrics", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_020",
+    "query": "估值分析常用哪些指标?",
+    "reference_answer": "常用估值指标包括 P/E、P/S、EV/EBITDA 和 DCF。",
+    "expected_keywords": ["P/E", "P/S", "EV/EBITDA", "DCF"],
+    "metadata": {"category": "valuation", "source": "investment_analysis", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_021",
+    "query": "判断一家公司的护城河可以从哪些角度入手?",
+    "reference_answer": "可从品牌、专利或许可证、切换成本、网络效应、成本优势和有效规模等角度判断。",
+    "expected_keywords": ["品牌", "切换成本", "网络效应", "成本优势"],
+    "metadata": {"category": "concept", "source": "investment_analysis", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_022",
+    "query": "投资分析里的反证信号是什么意思?",
+    "reference_answer": "反证信号是用来验证投资假设是否失效的关键观察点,例如增长放缓、利润率恶化或竞争格局变化。",
+    "expected_keywords": ["反证", "假设", "增长", "利润率"],
+    "metadata": {"category": "concept", "source": "investment_analysis", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_023",
+    "query": "请用多空双方视角分析微软。",
+    "reference_answer": "多头关注 Azure、企业软件和 AI 变现;空头关注 AI CapEx、Azure 放缓、监管和估值风险。",
+    "expected_keywords": ["微软", "多头", "空头", "Azure", "风险"],
+    "metadata": {"category": "deliberation", "source": "multi_view", "expected_mode": "deliberation"}
+  },
+  {
+    "id": "fin_024",
+    "query": "请对英伟达做一次多视角投资讨论。",
+    "reference_answer": "应结合增长、数据中心、利润率、护城河、估值、客户集中和出口管制等多空因素。",
+    "expected_keywords": ["英伟达", "数据中心", "多头", "空头", "估值"],
+    "metadata": {"category": "deliberation", "source": "multi_view", "expected_mode": "deliberation"}
+  },
+  {
+    "id": "fin_025",
+    "query": "如果只根据一个季度的财报就下结论,可能有什么问题?",
+    "reference_answer": "单季度数据可能有季节性、一次性因素和短期噪声,需要结合趋势和管理层指引。",
+    "expected_keywords": ["季度", "一次性", "噪声", "指引"],
+    "metadata": {"category": "concept", "source": "earnings_report_structure", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_026",
+    "query": "买回股票会怎样影响 EPS?",
+    "reference_answer": "回购会减少流通股数量,在利润不变时通常会推高每股收益 EPS。",
+    "expected_keywords": ["回购", "流通股", "EPS"],
+    "metadata": {"category": "concept", "source": "financial_metrics", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_027",
+    "query": "帮我解释毛利率、营业利润率和净利率的区别。",
+    "reference_answer": "毛利率衡量收入扣除销售成本后的比例,营业利润率反映经营效率,净利率体现扣除全部费用后的最终盈利能力。",
+    "expected_keywords": ["毛利率", "营业利润率", "净利率"],
+    "metadata": {"category": "concept", "source": "financial_metrics", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_028",
+    "query": "帮我分析一下 StarRocket AI Chips 的营收和利润率。",
+    "reference_answer": "知识库中没有该公司的可靠数据,应说明数据不足而不是编造营收或利润率。",
+    "expected_keywords": ["数据不足", "知识库"],
+    "metadata": {"category": "boundary", "source": "none", "expected_mode": "react", "expects_no_hallucination": true}
+  },
+  {
+    "id": "fin_029",
+    "query": "如果用户问的是投资建议,系统应该怎样处理风险?",
+    "reference_answer": "应提供风险提示,结合分散化、催化剂和反证信号,避免给出确定性收益承诺。",
+    "expected_keywords": ["风险", "分散", "催化剂", "反证"],
+    "metadata": {"category": "risk_analysis", "source": "investment_analysis", "expected_mode": "react"}
+  },
+  {
+    "id": "fin_030",
+    "query": "请综合比较苹果、微软、英伟达的风险差异。",
+    "reference_answer": "苹果风险包括中国市场和 App Store 政策,微软风险包括 AI CapEx、Azure 放缓和监管,英伟达风险包括客户集中、半导体周期和出口管制。",
+    "expected_keywords": ["苹果", "微软", "英伟达", "风险", "出口管制"],
+    "metadata": {"category": "comparison", "source": "cross_company", "expected_mode": "react"}
+  }
+]

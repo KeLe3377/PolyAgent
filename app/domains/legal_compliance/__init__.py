@@ -1,0 +1,1 @@
+"""Legal compliance domain pack."""

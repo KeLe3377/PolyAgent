@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local conversion notes / scratch work
+.skill_workspace/
+*.db
+
+# External repos / local experiments, not part of this skill
+testProject/
+.e2e_runs/
+
+# Retired converter implementation kept locally only
+commands/
+scripts/
+tests/
+.archives/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

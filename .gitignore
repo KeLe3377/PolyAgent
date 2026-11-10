@@ -1,0 +1,73 @@
+# --- Secrets / 本地环境(绝不入库)---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- 归档(本地知识资产,不入库)---
+.archives/
+
+# --- 个人文件(隐私,绝不入库)---
+resume_*.md
+*.docx
+
+# --- 运行时临时目录 ---
+.tmp/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.python-version
+
+# --- 测试 / 覆盖率 ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# --- 索引 / 工具产物(可重建)---
+.codegraph/
+worktrees/
+.worktrees/
+
+# --- 运行时数据 / 日志 ---
+*.log
+logs/
+run_outputs/
+runs/
+reports/
+*.sqlite
+*.sqlite3
+*.db
+
+# --- 外部公开数据集 / 可重建 benchmark ---
+TAT-QA/
+cuad/
+finqa/
+train_xml/
+gold_xml/
+data/benchmarks/
+
+# --- 编辑器 / 系统 ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
